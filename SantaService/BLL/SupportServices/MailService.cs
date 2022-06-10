@@ -1,5 +1,3 @@
-using System.Threading.Tasks;
-
 namespace BLL.SupportServices
 {
     public class MailService

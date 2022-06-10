@@ -1,6 +1,4 @@
-﻿using MersenneTwister;
-
-namespace BLL.SupportServices
+﻿namespace BLL.SupportServices
 {
     /// <summary>
     ///     random generator

@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace DM.Models
 {
     public class Tenant
