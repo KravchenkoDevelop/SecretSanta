@@ -1,7 +1,7 @@
 ﻿using DAL.Models;
 using DM.Models;
 
-namespace BLL.Abstracts;
+namespace BLL;
 
 public interface ITenantService
 {

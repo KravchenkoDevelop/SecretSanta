@@ -1,7 +1,8 @@
 ﻿using BLL.Abstracts;
 using DAL.Models;
+using DM.Models;
 
-namespace BLL.Services;
+namespace BLL;
 
 public partial class TenantService : ITenantService
 {
