@@ -8,9 +8,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\NewFolder\**" />
+    <Content Remove="Controllers\NewFolder\**" />
+    <EmbeddedResource Remove="Controllers\NewFolder\**" />
+    <None Remove="Controllers\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="C:\Users\TTA\.nuget\packages\dryioc.mefattributedmodel\7.0.1\contentFiles\cs\netstandard2.0\DryIoc\MefAttributedModel\AttributedModel.cs" />
+    <Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\Container.cs" />
+    <Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\Expression.cs" />
+    <Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\FastExpressionCompiler.cs" />
+    <Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\ImTools.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="DryIoc.dll" Version="5.1.0" />
     <PackageReference Include="DryIoc.WebApi.dll" Version="4.1.0" />
-    <PackageReference Include="MongoFramework" Version="0.27.0" />
     <PackageReference Include="Swashbuckle" Version="5.6.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
     <PackageReference Include="Swashbuckle.Examples" Version="3.12.0" />
@@ -18,7 +32,6 @@
 
   <ItemGroup>
     <Folder Include="App_Start\" />
-    <Folder Include="Controllers\NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>
