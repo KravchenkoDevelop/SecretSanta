@@ -1,10 +1,10 @@
 ﻿using DAL.Models;
 using DM.Models;
 
-namespace BLL;
-
-public interface ITenantService
+namespace BLL
 {
-    public Task<TenantModel> CreateNewTenant(Tenant newTenant);
-
+    public interface ITenantService
+    {
+        public Task<TenantModel> CreateNewTenant(Tenant newTenant);
+    }
 }

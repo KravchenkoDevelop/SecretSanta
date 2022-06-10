@@ -1,7 +1,7 @@
 ﻿using DAL.Models;
 using DM.Models;
 
-namespace BLL.Abstracts
+namespace BLL
 {
     /// <summary>
     ///     person functions
@@ -43,6 +43,11 @@ namespace BLL.Abstracts
         /// <returns></returns>
         public Task<bool> DeletePerson(Guid id);
 
+        /// <summary>
+        ///     binding method
+        /// </summary>
+        /// <param name="tenantId"></param>
+        /// <returns></returns>
         public Task<Person> BindingPersonToTenant(Guid tenantId);
 
     }

@@ -1,5 +1,4 @@
-﻿using BLL.Abstracts;
-using DAL.Models;
+﻿using DAL.Models;
 using DM.Models;
 
 namespace BLL

@@ -1,7 +1,6 @@
-using BLL.Abstracts;
 using DM.Models;
 
-namespace SecretSantaGenerator.BLL
+namespace BLL
 {
     public partial class PersonService : IPersonService
     {
