@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using SecretSantaGenerator.BLL.Abstracts;
 using Service.API.Repositories;
 
 namespace Service.API.Controllers

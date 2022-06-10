@@ -1,8 +1,5 @@
 ﻿using BLL.Abstracts;
 using DAL.Models;
-using SecretSantaGenerator.DM.Models;
-using System;
-using System.Threading.Tasks;
 
 namespace SecretSantaGenerator.BLL
 {

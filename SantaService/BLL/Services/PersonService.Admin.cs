@@ -1,8 +1,5 @@
 using BLL.Abstracts;
-using SecretSantaGenerator.DM.Models;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using DM.Models;
 
 namespace SecretSantaGenerator.BLL
 {

@@ -1,13 +1,10 @@
 ﻿using DAL.Models;
-using SecretSantaGenerator.DM.Models;
-using System.Threading.Tasks;
+using DM.Models;
 
 namespace BLL.Abstracts;
 
 public interface ITenantService
 {
     public Task<TenantModel> CreateNewTenant(Tenant newTenant);
-
-
 
 }
