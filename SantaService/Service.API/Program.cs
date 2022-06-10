@@ -13,7 +13,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(o => { 
+        o.SwaggerEndpoint("",""); 
+        o.RoutePrefix = string.Empty;
+    });
 }
 
 app.UseHttpsRedirection();
