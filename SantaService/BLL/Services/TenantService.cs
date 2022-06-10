@@ -1,9 +1,6 @@
-﻿using BLL.Abstracts;
-using DAL.Models;
-using SecretSantaGenerator.DM.Models;
-using System.Threading.Tasks;
+﻿using DAL.Models;
 
-namespace BLL.Services;
+namespace BLL;
 
 public partial class TenantService : ITenantService
 {

@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MersenneTwister" Version="1.0.6" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DM\DM.csproj" />
   </ItemGroup>
 

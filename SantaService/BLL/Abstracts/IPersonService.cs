@@ -1,10 +1,7 @@
 ﻿using DAL.Models;
-using SecretSantaGenerator.DM.Models;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using DM.Models;
 
-namespace BLL.Abstracts
+namespace BLL
 {
     /// <summary>
     ///     person functions
