@@ -1,17 +1,18 @@
-﻿using DM.Models;
+﻿using BLL.Abstracts;
+using SecretSantaGenerator.DM.Models;
 using System;
 using System.Collections.Generic;
 
-namespace BLL
+namespace SecretSantaGenerator.BLL
 {
     public partial class EventService : IEventService
     {
-        public Task<Event> ReadEvent(Guid id)
+        public Event ReadEvent(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Event>> WatchEvents(DateTime filterDate)
+        public IEnumerable<Event> WatchEvents(DateTime filterDate)
         {
             throw new NotImplementedException();
         }

@@ -1,26 +1,28 @@
+using BLL.Abstracts;
 using DAL.Models;
-using DM.Models;
+using SecretSantaGenerator.DM.Models;
+using System;
 
-namespace BLL
+namespace SecretSantaGenerator.BLL
 {
     public partial class EventService : IEventService
     {
-        public Task<Event> CreateEvent(EventModel newEvent)
+        public Event CreateEvent(EventModel newEvent)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Event> EditEvent(Guid id, EventModel updEvent)
+        public Event EditEvent(Guid id, EventModel updEvent)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Event> DeleteEvent(Guid id)
+        public Event DeleteEvent(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public Task SendNotification()
+        public void SendNotification()
         {
             throw new NotImplementedException();
         }

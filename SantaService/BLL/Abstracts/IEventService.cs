@@ -1,7 +1,9 @@
 ﻿using DAL.Models;
-using DM.Models;
+using SecretSantaGenerator.DM.Models;
+using System;
+using System.Collections.Generic;
 
-namespace BLL
+namespace BLL.Abstracts
 {
     public interface IEventService
     {
@@ -10,21 +12,21 @@ namespace BLL
         /// </summary>
         /// <param name="id">event id</param>
         /// <returns></returns>
-        public Task<Event> ReadEvent(Guid id);
+        public Event ReadEvent(Guid id);
 
         /// <summary>
         ///     get available events
         /// </summary>
         /// <param name="filterDate"></param>
         /// <returns></returns>
-        public Task<IEnumerable<Event>> WatchEvents(DateTime filterDate);
+        public IEnumerable<Event> WatchEvents(DateTime filterDate);
 
         /// <summary>
         ///     create new event
         /// </summary>
         /// <param name="newEvent">event from front</param>
         /// <returns></returns>
-        public Task<Event> CreateEvent(EventModel newEvent);
+        public Event CreateEvent(EventModel newEvent);
 
         /// <summary>
         ///     update event
@@ -32,18 +34,18 @@ namespace BLL
         /// <param name="id">edited event id</param>
         /// <param name="updEvent">new event data</param>
         /// <returns></returns>
-        public Task<Event> EditEvent(Guid id, EventModel updEvent);
+        public Event EditEvent(Guid id, EventModel updEvent);
 
         /// <summary>
         ///     remove event
         /// </summary>
         /// <param name="id">deleting event id</param>
         /// <returns></returns>
-        public Task<Event> DeleteEvent(Guid id);
+        public Event DeleteEvent(Guid id);
 
         /// <summary>
         ///     send notification email for members
         /// </summary>
-        public Task SendNotification();
+        public void SendNotification();
     }
 }

@@ -1,4 +1,7 @@
-﻿namespace DM.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace DM.Models
 {
     /// <summary>
     ///     event description

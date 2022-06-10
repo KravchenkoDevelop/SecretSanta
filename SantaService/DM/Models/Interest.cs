@@ -1,4 +1,6 @@
-﻿namespace DM.Models
+﻿using System;
+
+namespace DM.Models
 {
     /// <summary>
     ///     person hobbies or interests

@@ -1,6 +1,10 @@
-using DM.Models;
+using BLL.Abstracts;
+using SecretSantaGenerator.DM.Models;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace BLL
+namespace SecretSantaGenerator.BLL
 {
     public partial class PersonService : IPersonService
     {
