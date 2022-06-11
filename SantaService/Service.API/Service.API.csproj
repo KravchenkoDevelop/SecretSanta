@@ -1,41 +1,60 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Company>$(Authors)</Company>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<OutputType>Library</OutputType>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Company>$(Authors)</Company>
+		<Platforms>AnyCPU;x64</Platforms>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Controllers\NewFolder\**" />
-    <Content Remove="Controllers\NewFolder\**" />
-    <EmbeddedResource Remove="Controllers\NewFolder\**" />
-    <None Remove="Controllers\NewFolder\**" />
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Controllers\NewFolder\**" />
+		<Content Remove="Controllers\NewFolder\**" />
+		<EmbeddedResource Remove="Controllers\NewFolder\**" />
+		<None Remove="Controllers\NewFolder\**" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="C:\Users\TTA\.nuget\packages\dryioc.mefattributedmodel\7.0.1\contentFiles\cs\netstandard2.0\DryIoc\MefAttributedModel\AttributedModel.cs" />
-    <Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\Container.cs" />
-    <Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\Expression.cs" />
-    <Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\FastExpressionCompiler.cs" />
-    <Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\ImTools.cs" />
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="C:\Users\TTA\.nuget\packages\dryioc.mefattributedmodel\7.0.1\contentFiles\cs\netstandard2.0\DryIoc\MefAttributedModel\AttributedModel.cs" />
+		<Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\Container.cs" />
+		<Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\Expression.cs" />
+		<Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\FastExpressionCompiler.cs" />
+		<Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\ImTools.cs" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="DryIoc.dll" Version="5.1.0" />
-    <PackageReference Include="DryIoc.WebApi.dll" Version="4.1.0" />
-    <PackageReference Include="Swashbuckle" Version="5.6.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
-    <PackageReference Include="Swashbuckle.Examples" Version="3.12.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="DryIoc.dll" Version="5.1.0" />
+		<PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="6.0.2" />
+		<PackageReference Include="DryIoc.WebApi.dll" Version="4.1.0" />
+		<PackageReference Include="Swashbuckle" Version="5.6.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.1" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="App_Start\" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\BLL\BLL.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj" />
-  </ItemGroup>
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+		<OutputType>Exe</OutputType>
+		<IsPublishable>False</IsPublishable>
+		<DocumentationFile>D:\Repos\SecretSanta\SantaService\Service.API\Service.API.xml</DocumentationFile>
+	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <Optimize>False</Optimize>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+	  <Optimize>False</Optimize>
+	</PropertyGroup>
+	
+	
+	
 </Project>
