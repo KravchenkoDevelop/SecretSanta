@@ -1,31 +1,22 @@
-using DryIoc;
-using DryIoc.Microsoft.DependencyInjection;
-using Microsoft.OpenApi.Models;
-using Service.API;
-using System.Reflection;
-
-var builder = WebApplication.CreateBuilder(args);
 // DI register.
 var container = new Container(r => r.With(propertiesAndFields: r => r.ServiceType.Name.EndsWith("Controller") ? PropertiesAndFields.Properties()(r) : null));
 container.RegisterMyServices();
+WebApplication.CreateBuilder(args).Host.UseServiceProviderFactory(new DryIocServiceProviderFactory(container));
+WebApplication.CreateBuilder(args).Host.UseContentRoot(Directory.GetCurrentDirectory());
 
-builder.Host.UseServiceProviderFactory(new DryIocServiceProviderFactory(container));
-builder.Host.UseContentRoot(Directory.GetCurrentDirectory());
-builder.WebHost.UseIISIntegration();
+WebApplication.CreateBuilder(args).WebHost.UseIISIntegration();
 
-builder.Services.AddControllers();
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
+WebApplication.CreateBuilder(args).Services.AddControllers();
+WebApplication.CreateBuilder(args).Services.AddMvc().AddApplicationPart(Assembly.Load(new AssemblyName("Service.API")));
+WebApplication.CreateBuilder(args).Services.AddEndpointsApiExplorer();
+WebApplication.CreateBuilder(args).Services.AddSwaggerGen(c =>
 {
+    c.IncludeXmlComments(StartupServices.GetApiXMLDirectory());
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "SecretSanta", Version = $"{Assembly.GetEntryAssembly().GetName().Version}" });
     c.EnableAnnotations();
 });
 
-var app = builder.Build();
-//app.UseAuthorization();
-//app.UseAuthentication();
+var app = WebApplication.CreateBuilder(args).Build();
 
 // Configure the HTTP request pipeline.
 app.UseSwagger(o =>
@@ -42,7 +33,6 @@ app.UseSwaggerUI(o =>
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.MapControllers();
 app.UseRouting();
 
 app.Run();

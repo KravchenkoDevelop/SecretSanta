@@ -16,13 +16,7 @@
 		<None Remove="Controllers\NewFolder\**" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<Compile Remove="C:\Users\TTA\.nuget\packages\dryioc.mefattributedmodel\7.0.1\contentFiles\cs\netstandard2.0\DryIoc\MefAttributedModel\AttributedModel.cs" />
-		<Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\Container.cs" />
-		<Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\Expression.cs" />
-		<Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\FastExpressionCompiler.cs" />
-		<Compile Remove="C:\Users\TTA\.nuget\packages\dryioc\5.1.0\contentFiles\cs\netstandard2.0\DryIoc\ImTools.cs" />
-	</ItemGroup>
+	
 
 	<ItemGroup>
 		<PackageReference Include="DryIoc.dll" Version="5.1.0" />
@@ -36,7 +30,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\BLL\BLL.csproj" />
+	  <ProjectReference Include="..\BLL\BLL.csproj" />
 	</ItemGroup>
 
 	<PropertyGroup>
@@ -44,7 +38,7 @@
 		<RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
 		<OutputType>Exe</OutputType>
 		<IsPublishable>False</IsPublishable>
-		<DocumentationFile>D:\Repos\SecretSanta\SantaService\Service.API\Service.API.xml</DocumentationFile>
+		<DocumentationFile>.\Service.API.xml</DocumentationFile>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

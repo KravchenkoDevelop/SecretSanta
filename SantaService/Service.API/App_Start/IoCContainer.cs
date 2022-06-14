@@ -1,8 +1,4 @@
-﻿using BLL;
-using DryIoc;
-using DryIoc.WebApi;
-using Service.API.Repositories;
-using System.Web.Http;
+﻿using Service.API.Repositories;
 
 namespace Service.API
 {

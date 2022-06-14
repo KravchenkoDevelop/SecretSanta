@@ -1,5 +1,4 @@
-﻿using BLL;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Service.API.Repositories;
 
 namespace Service.API.Controllers
