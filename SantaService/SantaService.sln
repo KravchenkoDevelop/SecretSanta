@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DM", "DM\DM.csproj", "{BDDD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{82211CA8-C9EB-46D7-811C-2990DD596D47}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.API", "Service.API\Service.API.csproj", "{C8F310F4-6612-4EC5-B5A4-C550011EE6F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.API", "API\Service.API\Service.API.csproj", "{F1A696D6-84A0-40FE-B04F-4DA754B627ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,20 +47,20 @@ Global
 		{82211CA8-C9EB-46D7-811C-2990DD596D47}.Release|Any CPU.Build.0 = Release|Any CPU
 		{82211CA8-C9EB-46D7-811C-2990DD596D47}.Release|x64.ActiveCfg = Release|x64
 		{82211CA8-C9EB-46D7-811C-2990DD596D47}.Release|x64.Build.0 = Release|x64
-		{C8F310F4-6612-4EC5-B5A4-C550011EE6F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C8F310F4-6612-4EC5-B5A4-C550011EE6F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C8F310F4-6612-4EC5-B5A4-C550011EE6F2}.Debug|x64.ActiveCfg = Debug|x64
-		{C8F310F4-6612-4EC5-B5A4-C550011EE6F2}.Debug|x64.Build.0 = Debug|x64
-		{C8F310F4-6612-4EC5-B5A4-C550011EE6F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C8F310F4-6612-4EC5-B5A4-C550011EE6F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C8F310F4-6612-4EC5-B5A4-C550011EE6F2}.Release|x64.ActiveCfg = Release|x64
-		{C8F310F4-6612-4EC5-B5A4-C550011EE6F2}.Release|x64.Build.0 = Release|x64
+		{F1A696D6-84A0-40FE-B04F-4DA754B627ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A696D6-84A0-40FE-B04F-4DA754B627ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A696D6-84A0-40FE-B04F-4DA754B627ED}.Debug|x64.ActiveCfg = Debug|x64
+		{F1A696D6-84A0-40FE-B04F-4DA754B627ED}.Debug|x64.Build.0 = Debug|x64
+		{F1A696D6-84A0-40FE-B04F-4DA754B627ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A696D6-84A0-40FE-B04F-4DA754B627ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1A696D6-84A0-40FE-B04F-4DA754B627ED}.Release|x64.ActiveCfg = Release|x64
+		{F1A696D6-84A0-40FE-B04F-4DA754B627ED}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C8F310F4-6612-4EC5-B5A4-C550011EE6F2} = {AB8B5823-677B-4B15-B0B3-C5FCB52F1FAC}
+		{F1A696D6-84A0-40FE-B04F-4DA754B627ED} = {AB8B5823-677B-4B15-B0B3-C5FCB52F1FAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58928E7D-583A-4E94-9047-21E0D32C606B}

@@ -3,6 +3,8 @@ using Service.API.Repositories;
 
 namespace Service.API.Controllers
 {
+    [ApiController]
+
     public class ApiBaseController : ControllerBase
     {
         private IEventService _eventService;

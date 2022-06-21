@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "global": "^4.4.0",
     "redoc": "^2.0.0-rc.72",
     "redoc-cli": "^0.13.16"
   }
