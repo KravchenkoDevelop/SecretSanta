@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/api/http",
+      "sslPort": 0
+    },
+    "iisExpress": {
+      "applicationUrl": "https://localhost/api/http",
+      "sslPort": 44368
+    }
+  },
+  "profiles": {
+    "IIS Local": {
+      "commandName": "IIS",
+      "launchBrowser": true,
+      "launchUrl": "api-docs",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "nativeDebugging": false
+    }
+  }
+}
