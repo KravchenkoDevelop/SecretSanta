@@ -1,4 +1,6 @@
-﻿namespace Service.API.Controllers
+﻿using System.Web.Http;
+
+namespace Service.API.Controllers
 {
     /// <summary>
     /// Persons
