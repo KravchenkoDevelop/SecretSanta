@@ -16,5 +16,13 @@ namespace Service.API.Controllers
         {
             
         }
+        
+        [Route("persons/personsList")]
+        [HttpGet]
+        public partial async Task GetRandomPersonsListAsync()
+        {
+            
+        }
+
     }
 }

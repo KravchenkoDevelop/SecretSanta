@@ -12,5 +12,8 @@ namespace Service.API.Controllers
         /// </summary>
         /// <returns></returns>
         public partial Task GetAllPersonsListAsync();
+
+        public partial Task GetRandomPersonsListAsync();
+
     }
 }
