@@ -19,6 +19,7 @@ namespace Service.API
             registrator.Register<IEventService, EventService>(Reuse.Scoped);
             registrator.Register<IPersonService, PersonService>(Reuse.Scoped);
             registrator.Register<ITenantService, TenantService>(Reuse.Scoped);
+            registrator.Register<IRandomService, RandomService>(Reuse.Scoped);
         }
     }
 }

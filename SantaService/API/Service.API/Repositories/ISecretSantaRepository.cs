@@ -2,6 +2,6 @@
 {
     public interface ISecretSantaRepository
     {
-
+        public Task<List<int>> GetPersonsListAsync();
     }
 }

@@ -11,9 +11,13 @@ namespace Service.API.Controllers
         /// test doc
         /// </summary>
         /// <returns></returns>
-        public partial Task GetAllPersonsListAsync();
+        public partial Task<IHttpActionResult> GetAllPersonsListAsync();
 
-        public partial Task GetRandomPersonsListAsync();
+        /// <summary>
+        /// sandbox
+        /// </summary>
+        /// <returns></returns>
+        public partial Task<IHttpActionResult> GetRandomPersonsListAsync();
 
     }
 }

@@ -1,27 +1,31 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Service.API.Repositories;
+﻿using Service.API.Repositories;
+using System.Web.Http;
 
 namespace Service.API.Controllers
 {
-    [Route("prefix/[controller]")]
     public partial class PersonController : ApiBaseController
     {
-        public PersonController(IEventService eventService, IPersonService personService, ISecretSantaRepository secretSantaRepository) : base(eventService, personService, secretSantaRepository)
+        private ISecretSantaRepository _secretSantaRepository;
+
+        public PersonController(ISecretSantaRepository secretSantaRepository)
         {
+            _secretSantaRepository = secretSantaRepository;
         }
 
-        [Route("persons/personsList")]
+        [Route("/personsList")]
         [HttpGet]
-        public partial async Task GetAllPersonsListAsync()
+        public partial async Task<IHttpActionResult> GetAllPersonsListAsync()
         {
-            
+            return Ok();
         }
         
-        [Route("persons/personsList")]
+        [Route("/sandBox")]
         [HttpGet]
-        public partial async Task GetRandomPersonsListAsync()
+        public partial async Task<IHttpActionResult> GetRandomPersonsListAsync()
         {
-            
+            var result = _secretSantaRepository.GetPersonsListAsync();
+
+            return Ok(result);
         }
 
     }

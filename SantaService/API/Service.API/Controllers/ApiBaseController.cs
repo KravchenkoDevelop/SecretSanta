@@ -1,21 +1,11 @@
-using Microsoft.AspNetCore.Mvc;
 using Service.API.Repositories;
+using System.Web.Http;
 
 namespace Service.API.Controllers
 {
-    [ApiController]
-
-    public class ApiBaseController : ControllerBase
+    [Route("[controller]")]
+    public class ApiBaseController : ApiController
     {
-        private IEventService _eventService;
-        private IPersonService _personService;
-        private ISecretSantaRepository _secretSantaRepository;
-
-        public ApiBaseController(IEventService eventService, IPersonService personService, ISecretSantaRepository secretSantaRepository)
-        {
-            _eventService = eventService;
-            _personService = personService;
-            _secretSantaRepository = secretSantaRepository;
-        }
+       
     }
 }
